@@ -1,0 +1,13 @@
+index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pastor Psicólogo Jair Hernández</title>
+</head>
+<body>
+<h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
+<p>Bienvenido a mi página oficial de consejería pastoral y orientación psicológica.</p>
+<p>WhatsApp: 3124710702</p>
+</body>
+</html>
