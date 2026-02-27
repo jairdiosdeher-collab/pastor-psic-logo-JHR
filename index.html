@@ -9,10 +9,12 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
 color:white;
 text-align:center;
 }
@@ -49,8 +51,8 @@ font-weight:bold;
 .donar{background:#f77f00;}
 
 .qr-donacion{
-width:35%;
-max-width:120px;
+width:30%;
+max-width:110px;
 min-width:80px;
 height:auto;
 background:white;
@@ -66,7 +68,7 @@ bottom:15px;
 right:15px;
 background:#0d3b66;
 color:white;
-padding:10px;
+padding:12px;
 border:none;
 border-radius:30px;
 font-size:14px;
@@ -81,7 +83,7 @@ font-size:14px;
 </style>
 </head>
 
-<body>
+<body onclick="activarAudio()">
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
@@ -119,10 +121,22 @@ class="qr-donacion">
 </audio>
 
 <script>
-function toggleMusica(){
-var musica = document.getElementById("musicaFondo");
-if(musica.paused){
+let audioListo=false;
+
+function activarAudio(){
+if(!audioListo){
+var musica=document.getElementById("musicaFondo");
 musica.volume=0.2;
+musica.play().then(()=>{
+musica.pause();
+audioListo=true;
+});
+}
+}
+
+function toggleMusica(){
+var musica=document.getElementById("musicaFondo");
+if(musica.paused){
 musica.play();
 }else{
 musica.pause();
@@ -132,6 +146,7 @@ musica.pause();
 
 </body>
 </html>
+
 
 
 
