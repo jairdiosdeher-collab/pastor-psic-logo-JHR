@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,16 +74,10 @@ border-radius:30px;
 font-size:14px;
 z-index:999;
 }
-
-footer{
-background:#0d3b66;
-padding:10px;
-font-size:14px;
-}
 </style>
 </head>
 
-<body id="body">
+<body>
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
@@ -112,26 +102,22 @@ font-size:14px;
 class="qr-donacion">
 </section>
 
-<footer>
-© 2026 Pastor Psicólogo Jair Hernández
-</footer>
-
 <button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
 
-<audio id="musicaFondo" loop>
-<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5aef1db8df.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-var musica=document.getElementById("musicaFondo");
-musica.volume=0.2;
+let musica=null;
 
-document.body.addEventListener('click', function iniciar(){
+document.addEventListener("click",function(){
+if(!musica){
+musica=new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_5aef1db8df.mp3");
+musica.loop=true;
+musica.volume=0.2;
 musica.play();
-document.body.removeEventListener('click', iniciar);
-});
+}
+},{once:true});
 
 function toggleMusica(){
+if(!musica)return;
 if(musica.paused){
 musica.play();
 }else{
@@ -142,6 +128,7 @@ musica.pause();
 
 </body>
 </html>
+
 
 
 
