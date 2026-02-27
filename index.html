@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="manifest" href="manifest.json">
+
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0d3b66">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
-  <script>
-if ('serviceWorker' in navigator) {
- navigator.serviceWorker.register('service-worker.js')
- .then(function() {
-   console.log("App lista offline");
- });
-}
-</script>
-
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -37,25 +30,6 @@ background:rgba(0,0,0,0.5);
 border-radius:12px;
 width:90%;
 max-width:500px;
-}
-
-h1{
-font-size:24px;
-}
-
-h2{
-font-size:20px;
-}
-
-p{
-font-size:16px;
-}
-
-svg{
-width:70px;
-height:70px;
-margin:10px auto;
-display:block;
 }
 
 .btn{
@@ -87,27 +61,6 @@ margin:10px auto;
 display:block;
 }
 
-.testimonio{
-background:rgba(255,255,255,0.1);
-padding:12px;
-border-radius:8px;
-margin-bottom:10px;
-font-size:14px;
-}
-
-.versiculo{
-font-style:italic;
-font-size:15px;
-margin:10px;
-opacity:0.8;
-}
-
-footer{
-background:#0d3b66;
-padding:10px;
-font-size:14px;
-}
-
 .music-btn{
 position:fixed;
 bottom:15px;
@@ -120,19 +73,17 @@ border-radius:30px;
 font-size:14px;
 z-index:999;
 }
-
 </style>
+
 </head>
 
 <body>
 
-<audio id="musicaFondo" loop>
-  <source src=<audio id="musicaFondo" loop preload="auto">
-  <source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
-</audio>
+<audio id="musicaFondo" loop preload="auto">
+<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
 </audio>
 
-<<button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
+<button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
@@ -141,16 +92,7 @@ z-index:999;
 
 <section>
 <h2>Acompañamiento Espiritual</h2>
-
-<svg viewBox="0 0 24 24" fill="white">
-<path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
-</svg>
-
 <p>Orientación basada en principios bíblicos y psicológicos.</p>
-
-<div class="versiculo">
-“El Señor está cerca de los quebrantados de corazón” - Salmo 34:18
-</div>
 
 <a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
 WhatsApp
@@ -159,13 +101,6 @@ WhatsApp
 
 <section>
 <h2>IA Pastoral</h2>
-
-<svg viewBox="0 0 24 24" fill="white">
-<path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-</svg>
-
-<p>Asistente virtual de apoyo emocional.</p>
-
 <a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
 Acceder IA
 </a>
@@ -182,18 +117,6 @@ Donar
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Nequi%203124710702"
 class="qr-donacion">
-</section>
-
-<section>
-<h2>Testimonios</h2>
-
-<div class="testimonio">
-Gracias al acompañamiento pastoral encontré paz.
-</div>
-
-<div class="testimonio">
-La orientación restauró mi esperanza.
-</div>
 
 </section>
 
@@ -202,15 +125,32 @@ La orientación restauró mi esperanza.
 </footer>
 
 <script>
-function activarMusica(){
-var musica = document.getElementById("musicaFondo");
-musica.volume = 0.2;
-musica.play();
+
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('service-worker.js');
 }
+
+let musica = document.getElementById("musicaFondo");
+let reproduciendo = false;
+
+function toggleMusica(){
+ if(!reproduciendo){
+  musica.volume = 0.12;
+  musica.play();
+  reproduciendo = true;
+  document.querySelector(".music-btn").innerText = "🔇 Pausar";
+ } else {
+  musica.pause();
+  reproduciendo = false;
+  document.querySelector(".music-btn").innerText = "🎵 Música";
+ }
+}
+
 </script>
 
 </body>
 </html>
+
 
 
 
