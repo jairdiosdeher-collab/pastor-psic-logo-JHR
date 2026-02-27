@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d3b66">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(circle at top, #1d3557, #0d1b2a);
+font-family:Arial;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
+background-size:cover;
+background-position:center;
 color:white;
 text-align:center;
 }
 
 header{
 background:#0d3b66;
-padding:30px 10px;
+padding:25px 10px;
 }
 
 section{
-padding:20px 15px;
+padding:20px;
 margin:15px auto;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 border-radius:12px;
 width:90%;
 max-width:500px;
@@ -73,17 +72,16 @@ border-radius:30px;
 font-size:14px;
 z-index:999;
 }
-</style>
 
+footer{
+background:#0d3b66;
+padding:10px;
+font-size:14px;
+}
+</style>
 </head>
 
 <body>
-
-<audio id="musicaFondo" loop preload="auto">
-<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
@@ -93,63 +91,48 @@ z-index:999;
 <section>
 <h2>Acompañamiento Espiritual</h2>
 <p>Orientación basada en principios bíblicos y psicológicos.</p>
-
-<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
-WhatsApp
-</a>
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">WhatsApp</a>
 </section>
 
 <section>
 <h2>IA Pastoral</h2>
-<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
-Acceder IA
-</a>
+<p>Asistente virtual de apoyo emocional.</p>
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder IA</a>
 </section>
 
 <section>
 <h2>Donaciones Nequi</h2>
-
 <p>3124710702</p>
-
-<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
-Donar
-</a>
-
+<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">Donar</a>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Nequi%203124710702"
 class="qr-donacion">
-
 </section>
 
 <footer>
 © 2026 Pastor Psicólogo Jair Hernández
 </footer>
 
+<button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
+
+<audio id="musicaFondo" loop preload="auto">
+<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
+</audio>
+
 <script>
-
-if ('serviceWorker' in navigator) {
- navigator.serviceWorker.register('service-worker.js');
-}
-
-let musica = document.getElementById("musicaFondo");
-let reproduciendo = false;
-
 function toggleMusica(){
- if(!reproduciendo){
-  musica.volume = 0.12;
-  musica.play();
-  reproduciendo = true;
-  document.querySelector(".music-btn").innerText = "🔇 Pausar";
- } else {
-  musica.pause();
-  reproduciendo = false;
-  document.querySelector(".music-btn").innerText = "🎵 Música";
- }
+var musica = document.getElementById("musicaFondo");
+if(musica.paused){
+musica.volume=0.2;
+musica.play();
+}else{
+musica.pause();
 }
-
+}
 </script>
 
 </body>
 </html>
+
 
 
 
