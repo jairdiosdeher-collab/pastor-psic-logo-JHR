@@ -4,42 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pastor Psicólogo Jair Hernández</title>
-
 <style>
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:url('https://images.unsplash.com/photo-1521532259637-12c49f7a2d71?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-background-attachment: fixed;
-color:white;
-text-align:center;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #0d3b66;
+  color:white;
+  text-align:center;
 }
 
 header{
-background:rgba(13,59,102,0.85);
-padding:40px 20px;
+  background:rgba(13,59,102,0.85);
+  padding:40px 20px;
 }
 
 section{
-padding:40px 20px;
-background:rgba(0,0,0,0.5);
-margin:20px;
-border-radius:12px;
+  padding:40px 20px;
+  background:rgba(0,0,0,0.5);
+  margin:20px;
+  border-radius:12px;
 }
 
 h1,h2,h3{
-margin:20px 0;
+  margin:20px 0;
 }
 
 .btn{
-display:inline-block;
-padding:15px 25px;
-margin:10px;
-font-size:18px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
+  display:inline-block;
+  padding:15px 25px;
+  margin:10px;
+  font-size:18px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
 }
 
 .whatsapp{background:#25D366;}
@@ -47,93 +45,111 @@ font-weight:bold;
 .ia{background:#0077b6;}
 .donar{background:#f77f00;}
 
-svg{margin:20px auto; display:block;}
+img, svg{
+  max-width:200px;
+  margin:20px auto;
+  display:block;
+}
 
 .testimonio{
-background:rgba(255,255,255,0.1);
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
 }
 
 .versiculo{
-font-style:italic;
-font-size:18px;
-margin:20px 0;
-animation:fadeIn 4s infinite alternate;
+  font-style:italic;
+  font-size:18px;
+  margin:20px 0;
+  animation:fadeIn 4s infinite alternate;
 }
 
 @keyframes fadeIn{
-0%{opacity:0.2;}
-100%{opacity:1;}
+  0%{opacity:0.2;}
+  100%{opacity:1;}
 }
 </style>
 </head>
-
 <body>
 
 <!-- MÚSICA DE FONDO -->
 <audio autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
 </audio>
 
 <header>
-<h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
-<p>Consejería Pastoral y Orientación Psicológica</p>
+  <h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
+  <p>Consejería Pastoral y Orientación Psicológica</p>
 </header>
 
 <section>
-<h2>🙏 Acompañamiento Espiritual y Emocional</h2>
-<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
-<path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
-</svg>
-<p>Recibe orientación basada en principios bíblicos y psicológicos.</p>
-<div class="versiculo">“Confía en Jehová con todo tu corazón, y no te apoyes en tu propia prudencia” - Proverbios 3:5</div>
-<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">Escribir por WhatsApp</a>
+  <h2>🙏 Acompañamiento Espiritual y Emocional</h2>
+
+  <!-- SVG Biblia -->
+  <svg width="150" height="150" viewBox="0 0 24 24" fill="white">
+    <path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
+  </svg>
+
+  <p>Recibe orientación basada en principios bíblicos y psicológicos.</p>
+  <div class="versiculo">“Confía en Jehová con todo tu corazón, y no te apoyes en tu propia prudencia” - Proverbios 3:5</div>
+  <a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">Escribir por WhatsApp</a>
 </section>
 
 <section>
-<h2>✝️ Consejería Cristiana</h2>
-<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
-<path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/>
-</svg>
-<p>Apoyo para ansiedad, crisis emocionales y dirección espiritual.</p>
+  <h2>✝️ Consejería Cristiana</h2>
+  
+  <!-- SVG Cruz -->
+  <svg width="150" height="150" viewBox="0 0 24 24" fill="white">
+    <path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/>
+  </svg>
+
+  <p>Apoyo para ansiedad, crisis emocionales y dirección espiritual.</p>
 </section>
 
 <section>
-<h2>🤖 Asistente Virtual Pastoral</h2>
-<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
-<path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-</svg>
-<p>Habla ahora con nuestra IA de orientación emocional y espiritual.</p>
-<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder a la IA Pastoral</a>
+  <h2>🤖 Asistente Virtual Pastoral</h2>
+  
+  <!-- SVG Oración / Esperanza -->
+  <svg width="150" height="150" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+  </svg>
+
+  <p>Habla ahora con nuestra IA de orientación emocional y espiritual.</p>
+  <a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder a la IA Pastoral</a>
 </section>
 
 <section>
-<h2>💜 Apoya este Ministerio</h2>
-<p>Haz tu donación al Nequi: 3124710702</p>
-<a class="btn donar" href="https://wa.me/573124710702?text=Deseo%20realizar%20una%20donación%20por%20Nequi" target="_blank">Donar por Nequi</a>
-<br><br>
-<h3>Escanea para donar</h3>
-<img src="qr-nequi.jpg" width="200" style="border-radius:12px;">
+  <h2>💜 Apoya este Ministerio</h2>
+  <p>Haz tu donación al Nequi: 3124710702</p>
+  <a class="btn donar" href="https://wa.me/573124710702?text=Deseo%20realizar%20una%20donación%20por%20Nequi" target="_blank">Donar por Nequi</a>
+
+  <h3>Escanea para donar</h3>
+
+  <!-- SVG QR placeholder -->
+  <svg width="150" height="150" viewBox="0 0 100 100" fill="white">
+    <rect width="100" height="100"/>
+    <text x="10" y="55" fill="black" font-size="10">QR Nequi</text>
+  </svg>
 </section>
 
 <section>
-<h2>📖 Testimonios</h2>
-<div class="testimonio">
-<p>“Gracias al acompañamiento del Pastor Jair pude superar mis momentos de ansiedad y acercarme más a Dios.”</p>
-</div>
-<div class="testimonio">
-<p>“Su orientación me ayudó a reconciliarme con mi familia y restaurar mi fe.”</p>
-</div>
+  <h2>📖 Testimonios</h2>
+  <div class="testimonio">
+    <p>“Gracias al acompañamiento del Pastor Jair pude superar mis momentos de ansiedad y acercarme más a Dios.”</p>
+  </div>
+  <div class="testimonio">
+    <p>“Su orientación me ayudó a reconciliarme con mi familia y restaurar mi fe.”</p>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Pastor Psicólogo Jair Hernández Rodríguez</p>
+  <p>© 2026 Pastor Psicólogo Jair Hernández Rodríguez</p>
 </footer>
 
 </body>
 </html>
+
 
 
 
