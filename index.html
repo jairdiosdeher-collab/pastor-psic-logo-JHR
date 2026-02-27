@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,19 +10,13 @@
 body{
 margin:0;
 font-family:Arial;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
 url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;
 text-align:center;
-}
-
-header{
-background:#0d3b66;
-padding:25px;
 }
 
 section{
@@ -31,35 +26,6 @@ background:rgba(0,0,0,0.6);
 border-radius:12px;
 width:90%;
 max-width:500px;
-}
-
-.btn{
-display:block;
-width:80%;
-max-width:280px;
-padding:12px;
-margin:10px auto;
-font-size:16px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-.whatsapp{background:#25D366;}
-.ia{background:#0077b6;}
-.donar{background:#f77f00;}
-
-.qr-donacion{
-width:28%;
-max-width:110px;
-min-width:80px;
-height:auto;
-background:white;
-padding:6px;
-border-radius:10px;
-margin:10px auto;
-display:block;
 }
 
 .music-btn{
@@ -79,64 +45,50 @@ z-index:999;
 
 <body>
 
-<header>
+<section>
 <h1>Pastor Psicólogo Jair Hernández</h1>
 <p>Consejería Pastoral y Orientación Psicológica</p>
-</header>
-
-<section>
-<h2>Acompañamiento Espiritual</h2>
-<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">WhatsApp</a>
 </section>
 
-<section>
-<h2>IA Pastoral</h2>
-<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder IA</a>
-</section>
-
-<section>
-<h2>Donaciones Nequi</h2>
-<p>3124710702</p>
-<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">Donar</a>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Nequi%203124710702"
-class="qr-donacion">
-</section>
-
-<button class="music-btn" onclick="toggleSonido()">🎵 Música</button>
+<button class="music-btn" id="btnMusica">🎵 Activar Música</button>
 
 <script>
-let audioCtx;
-let oscilador;
+let ctx=null;
+let osc=null;
+let gain=null;
 
-function toggleSonido(){
+document.getElementById("btnMusica").addEventListener("click",async()=>{
 
-if(!audioCtx){
+if(!ctx){
 
-audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+ctx=new(window.AudioContext||window.webkitAudioContext)();
 
-oscilador = audioCtx.createOscillator();
-let gainNode = audioCtx.createGain();
+await ctx.resume(); // 🔑 DESPIERTA EL AUDIO
 
-oscilador.type = 'sine';
-oscilador.frequency.setValueAtTime(432, audioCtx.currentTime);
+osc=ctx.createOscillator();
+gain=ctx.createGain();
 
-gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
+osc.type="sine";
+osc.frequency.value=396;
 
-oscilador.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+gain.gain.value=0.02;
 
-oscilador.start();
+osc.connect(gain);
+gain.connect(ctx.destination);
+
+osc.start();
 
 }else{
 
-if(audioCtx.state === 'running'){
-audioCtx.suspend();
+if(ctx.state==="running"){
+ctx.suspend();
 }else{
-audioCtx.resume();
+ctx.resume();
 }
 
 }
-}
+
+});
 </script>
 
 </body>
