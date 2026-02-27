@@ -9,18 +9,26 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#f4f6f8;
+background:url('https://images.unsplash.com/photo-1521532259637-12c49f7a2d71?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+background-attachment: fixed;
+color:white;
 text-align:center;
 }
 
 header{
-background:#0d3b66;
-color:white;
+background:rgba(13,59,102,0.85);
 padding:40px 20px;
 }
 
 section{
 padding:40px 20px;
+background:rgba(0,0,0,0.5);
+margin:20px;
+border-radius:12px;
+}
+
+h1,h2,h3{
+margin:20px 0;
 }
 
 .btn{
@@ -31,6 +39,7 @@ font-size:18px;
 border-radius:8px;
 text-decoration:none;
 color:white;
+font-weight:bold;
 }
 
 .whatsapp{background:#25D366;}
@@ -38,20 +47,35 @@ color:white;
 .ia{background:#0077b6;}
 .donar{background:#f77f00;}
 
-img{
-max-width:300px;
-margin:20px auto;
+svg{margin:20px auto; display:block;}
+
+.testimonio{
+background:rgba(255,255,255,0.1);
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
 }
 
-footer{
-background:#0d3b66;
-color:white;
-padding:20px;
+.versiculo{
+font-style:italic;
+font-size:18px;
+margin:20px 0;
+animation:fadeIn 4s infinite alternate;
+}
+
+@keyframes fadeIn{
+0%{opacity:0.2;}
+100%{opacity:1;}
 }
 </style>
 </head>
 
 <body>
+
+<!-- MÚSICA DE FONDO -->
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+</audio>
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
@@ -60,59 +84,48 @@ padding:20px;
 
 <section>
 <h2>🙏 Acompañamiento Espiritual y Emocional</h2>
-
-<!-- Imagen Biblia -->
-<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
 <path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
 </svg>
-
 <p>Recibe orientación basada en principios bíblicos y psicológicos.</p>
+<div class="versiculo">“Confía en Jehová con todo tu corazón, y no te apoyes en tu propia prudencia” - Proverbios 3:5</div>
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">Escribir por WhatsApp</a>
 </section>
 
 <section>
 <h2>✝️ Consejería Cristiana</h2>
-
-<!-- Imagen Cruz -->
-<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
 <path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/>
 </svg>
-
 <p>Apoyo para ansiedad, crisis emocionales y dirección espiritual.</p>
 </section>
 
 <section>
 <h2>🤖 Asistente Virtual Pastoral</h2>
-
-<!-- Imagen Oración -->
-<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<svg width="200" height="200" viewBox="0 0 24 24" fill="white">
 <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
 </svg>
-
 <p>Habla ahora con nuestra IA de orientación emocional y espiritual.</p>
-
-<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
-Acceder a la IA Pastoral
-</a>
-
-</section>
-
-<section>
-<h2>📲 Contacto WhatsApp</h2>
-<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
-Escribir por WhatsApp
-</a>
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder a la IA Pastoral</a>
 </section>
 
 <section>
 <h2>💜 Apoya este Ministerio</h2>
+<p>Haz tu donación al Nequi: 3124710702</p>
+<a class="btn donar" href="https://wa.me/573124710702?text=Deseo%20realizar%20una%20donación%20por%20Nequi" target="_blank">Donar por Nequi</a>
+<br><br>
+<h3>Escanea para donar</h3>
+<img src="qr-nequi.jpg" width="200" style="border-radius:12px;">
+</section>
 
-<p>Haz tu donación al Nequi:</p>
-<h3>3124710702</h3>
-
-<a class="btn donar" href="https://wa.me/573124710702?text=Hola%20quiero%20hacer%20una%20donación%20al%20ministerio" target="_blank">
-Donar por Nequi
-</a>
-
+<section>
+<h2>📖 Testimonios</h2>
+<div class="testimonio">
+<p>“Gracias al acompañamiento del Pastor Jair pude superar mis momentos de ansiedad y acercarme más a Dios.”</p>
+</div>
+<div class="testimonio">
+<p>“Su orientación me ayudó a reconciliarme con mi familia y restaurar mi fe.”</p>
+</div>
 </section>
 
 <footer>
@@ -121,6 +134,7 @@ Donar por Nequi
 
 </body>
 </html>
+
 
 
 
