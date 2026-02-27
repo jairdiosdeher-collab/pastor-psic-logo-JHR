@@ -74,6 +74,10 @@ border-radius:30px;
 font-size:14px;
 z-index:999;
 }
+
+iframe{
+display:none;
+}
 </style>
 </head>
 
@@ -102,32 +106,25 @@ z-index:999;
 class="qr-donacion">
 </section>
 
-<button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
+<button class="music-btn" onclick="activarMusica()">🎵 Música</button>
+
+<div id="player"></div>
 
 <script>
-let musica=null;
+var activo=false;
 
-document.addEventListener("click",function(){
-if(!musica){
-musica=new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_5aef1db8df.mp3");
-musica.loop=true;
-musica.volume=0.2;
-musica.play();
-}
-},{once:true});
-
-function toggleMusica(){
-if(!musica)return;
-if(musica.paused){
-musica.play();
-}else{
-musica.pause();
+function activarMusica(){
+if(!activo){
+document.getElementById("player").innerHTML =
+'<iframe width="0" height="0" src="https://www.youtube.com/embed/7C2z4GqqS5E?autoplay=1&loop=1&playlist=7C2z4GqqS5E"></iframe>';
+activo=true;
 }
 }
 </script>
 
 </body>
 </html>
+
 
 
 
