@@ -1,13 +1,104 @@
-index.html
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Pastor Psic�logo Jair Hern�ndez</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jair Hernández Rodríguez | Pastor Consejero</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+background:#f4f6f9;
+color:#333;
+text-align:center;
+}
+
+header{
+background:white;
+padding:60px 20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:18px;
+color:#555;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.section{
+padding:60px 20px;
+max-width:800px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+margin-bottom:30px;
+}
+</style>
 </head>
+
 <body>
-<h1>Pastor Psic�logo Jair Hern�ndez Rodr�guez</h1>
-<p>Bienvenido a mi p�gina oficial de consejer�a pastoral y orientaci�n psicol�gica.</p>
-<p>WhatsApp: 3124710702</p>
+
+<header>
+<h1>Jair Hernández Rodríguez</h1>
+<p class="subtitle">Pastor Consejero | Estudiante de Psicología</p>
+<p>Acompañamiento emocional y espiritual confidencial basado en principios bíblicos y psicológicos.</p>
+
+<a class="btn" href="https://wa.me/573124710702?text=Hola%20Pastor%20Jair,%20necesito%20orientación%20emocional%20y%20espiritual">
+Solicitar orientación por WhatsApp
+</a>
+
+</header>
+
+<section class="section">
+
+<div class="card">
+<h2>¿Te identificas con esto?</h2>
+<p>Ansiedad, crisis emocional, conflictos familiares, estrés espiritual o falta de dirección.</p>
+<p>Aquí encontrarás un espacio seguro de escucha y orientación integral.</p>
+</div>
+
+<div class="card">
+<h2>¿Quién soy?</h2>
+<p>Pastor consejero con más de 20 años de experiencia en acompañamiento espiritual.</p>
+<p>Actualmente en formación profesional en Psicología.</p>
+<p>Integro herramientas psicológicas y principios bíblicos para apoyar procesos de crecimiento personal y restauración espiritual.</p>
+</div>
+
+<div class="card">
+<h2>Da el primer paso hoy</h2>
+<p>No enfrentes tus procesos solo. Estoy para acompañarte.</p>
+
+<a class="btn" href="https://wa.me/573124710702?text=Hola%20Pastor%20Jair,%20deseo%20iniciar%20un%20proceso%20de%20acompañamiento">
+Hablar ahora
+</a>
+
+</div>
+
+</section>
+
 </body>
 </html>
+
