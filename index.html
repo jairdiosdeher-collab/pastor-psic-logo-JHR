@@ -74,12 +74,6 @@ border-radius:30px;
 font-size:14px;
 z-index:999;
 }
-
-iframe{
-width:0;
-height:0;
-border:0;
-}
 </style>
 </head>
 
@@ -108,24 +102,46 @@ border:0;
 class="qr-donacion">
 </section>
 
-<button class="music-btn" onclick="activarMusica()">🎵 Música</button>
-
-<div id="player"></div>
+<button class="music-btn" onclick="toggleSonido()">🎵 Música</button>
 
 <script>
-var iframe;
+let audioCtx;
+let oscilador;
 
-function activarMusica(){
-if(!iframe){
-iframe=document.createElement("iframe");
-iframe.src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=0&loop=1&playlist=jfKfPfyJRdk";
-document.getElementById("player").appendChild(iframe);
+function toggleSonido(){
+
+if(!audioCtx){
+
+audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+oscilador = audioCtx.createOscillator();
+let gainNode = audioCtx.createGain();
+
+oscilador.type = 'sine';
+oscilador.frequency.setValueAtTime(432, audioCtx.currentTime);
+
+gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
+
+oscilador.connect(gainNode);
+gainNode.connect(audioCtx.destination);
+
+oscilador.start();
+
+}else{
+
+if(audioCtx.state === 'running'){
+audioCtx.suspend();
+}else{
+audioCtx.resume();
+}
+
 }
 }
 </script>
 
 </body>
 </html>
+
 
 
 
