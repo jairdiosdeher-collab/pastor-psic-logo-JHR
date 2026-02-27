@@ -1,14 +1,22 @@
-Commit changes
-There was an error committing your changes: A file with the same name already exists. Please choose a different name and try again.
-Commit message
-Add installation prompt script to manifest.json
-Copilot commit message generated: Add installation prompt script to manifest.json
-Extended description
-Add an optional extended description...
-Message and description suggested by Copilot.
-Direct commit or PR
-
-Commit directly to the main branch
-
-Create a new branch for this commit and start a pull request Learn more about pull requests
+{
+  "name": "Pastor Psicólogo Jair Hernández",
+  "short_name": "Pastor IA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0d3b66",
+  "theme_color": "#0d3b66",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/201/201818.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/201/201818.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
 
