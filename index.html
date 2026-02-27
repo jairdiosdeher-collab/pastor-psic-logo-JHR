@@ -6,188 +6,200 @@
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
-  <script>
-function activarMusica(){
-  var musica = document.getElementById("musicaFondo");
-  musica.volume = 0.2;
-  musica.play();
-}
-</script>
-body{
-  <audio id="musicaFondo" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
-</audio>
 
-<button onclick="activarMusica()" 
-style="position:fixed;bottom:20px;right:20px;
-background:#0d3b66;color:white;
-padding:15px;border:none;
-border-radius:50px;
-font-size:16px;cursor:pointer;
-z-index:999;">
-🔊 Activar Música
-</button>
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  radial-gradient(circle at top, #1d3557, #0d1b2a);
-  color:white;
-  text-align:center;
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), radial-gradient(circle at top, #1d3557, #0d1b2a);
+color:white;
+text-align:center;
 }
 
 header{
-  background:rgba(13,59,102,0.9);
-  padding:40px 20px;
+background:#0d3b66;
+padding:30px 10px;
 }
 
 section{
-  padding:40px 20px;
-  background:rgba(0,0,0,0.55);
-  margin:20px;
-  border-radius:15px;
-  box-shadow:0 0 20px rgba(255,255,255,0.1);
+padding:20px 15px;
+margin:15px auto;
+background:rgba(0,0,0,0.5);
+border-radius:12px;
+width:90%;
+max-width:500px;
 }
 
-h1,h2,h3{
-  margin:20px 0;
+h1{
+font-size:24px;
+}
+
+h2{
+font-size:20px;
+}
+
+p{
+font-size:16px;
+}
+
+svg{
+width:70px;
+height:70px;
+margin:10px auto;
+display:block;
 }
 
 .btn{
-  display:inline-block;
-  padding:15px 25px;
-  margin:10px;
-  font-size:18px;
-  border-radius:10px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
+display:block;
+width:80%;
+max-width:280px;
+padding:12px;
+margin:10px auto;
+font-size:16px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
 
 .whatsapp{background:#25D366;}
 .ia{background:#0077b6;}
 .donar{background:#f77f00;}
 
-svg{
-  margin:20px auto;
-  display:block;
+.qr-donacion{
+width:35%;
+max-width:120px;
+min-width:80px;
+height:auto;
+background:white;
+padding:6px;
+border-radius:10px;
+margin:10px auto;
+display:block;
 }
 
 .testimonio{
-  background:rgba(255,255,255,0.1);
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:20px;
+background:rgba(255,255,255,0.1);
+padding:12px;
+border-radius:8px;
+margin-bottom:10px;
+font-size:14px;
 }
 
 .versiculo{
-  font-style:italic;
-  font-size:18px;
-  margin:20px 0;
-  animation:fadeIn 5s infinite alternate;
-}
-
-@keyframes fadeIn{
-  0%{opacity:0.3;}
-  100%{opacity:1;}
+font-style:italic;
+font-size:15px;
+margin:10px;
+opacity:0.8;
 }
 
 footer{
-  background:#0d3b66;
-  padding:20px;
+background:#0d3b66;
+padding:10px;
+font-size:14px;
 }
+
+.music-btn{
+position:fixed;
+bottom:15px;
+right:15px;
+background:#0d3b66;
+color:white;
+padding:10px;
+border:none;
+border-radius:30px;
+font-size:14px;
+z-index:999;
+}
+
 </style>
 </head>
 
 <body>
 
+<audio id="musicaFondo" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="activarMusica()">🔊 Música</button>
+
 <header>
-  <h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
-  <p>Consejería Pastoral y Orientación Psicológica</p>
+<h1>Pastor Psicólogo Jair Hernández</h1>
+<p>Consejería Pastoral y Orientación Psicológica</p>
 </header>
 
 <section>
-  <h2>🙏 Acompañamiento Espiritual y Emocional</h2>
+<h2>Acompañamiento Espiritual</h2>
 
-  <svg width="120" height="120" viewBox="0 0 24 24" fill="white">
-    <path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
-  </svg>
+<svg viewBox="0 0 24 24" fill="white">
+<path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
+</svg>
 
-  <p>Recibe orientación basada en principios bíblicos y psicológicos.</p>
+<p>Orientación basada en principios bíblicos y psicológicos.</p>
 
-  <div class="versiculo">
-  “El Señor está cerca de los quebrantados de corazón” - Salmo 34:18
-  </div>
+<div class="versiculo">
+“El Señor está cerca de los quebrantados de corazón” - Salmo 34:18
+</div>
 
-  <a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
-  Escribir por WhatsApp
-  </a>
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
+WhatsApp
+</a>
 </section>
 
 <section>
-  <h2>✝️ Consejería Cristiana</h2>
+<h2>IA Pastoral</h2>
 
-  <svg width="120" height="120" viewBox="0 0 24 24" fill="white">
-    <path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/>
-  </svg>
+<svg viewBox="0 0 24 24" fill="white">
+<path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+</svg>
 
-  <p>Apoyo en ansiedad, crisis emocionales, restauración familiar y crecimiento espiritual.</p>
+<p>Asistente virtual de apoyo emocional.</p>
+
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
+Acceder IA
+</a>
 </section>
 
 <section>
-  <h2>🤖 Asistente Virtual Pastoral</h2>
+<h2>Donaciones Nequi</h2>
 
-  <svg width="120" height="120" viewBox="0 0 24 24" fill="white">
-    <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-  </svg>
+<p>3124710702</p>
 
-  <p>Accede ahora a la IA de orientación emocional y espiritual.</p>
+<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
+Donar
+</a>
 
-  <a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
-  Acceder a la IA Pastoral
-  </a>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Nequi%203124710702"
+class="qr-donacion">
 </section>
 
 <section>
-  <h2>💜 Apoya este Ministerio</h2>
+<h2>Testimonios</h2>
 
-  <p>Donaciones vía Nequi:</p>
-  <h3>3124710702</h3>
+<div class="testimonio">
+Gracias al acompañamiento pastoral encontré paz.
+</div>
 
-  <a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
-  Donar por Nequi
-  </a>
+<div class="testimonio">
+La orientación restauró mi esperanza.
+</div>
 
-  <h3>Escanea el QR para donar</h3>
-
-  <!-- QR generado automáticamente -->
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Nequi%203124710702" 
-       alt="QR Nequi 3124710702" 
-       style="border-radius:12px; background:white; padding:10px;">
-</section>
-
-<section>
-  <h2>📖 Testimonios</h2>
-
-  <div class="testimonio">
-    “Gracias al acompañamiento pastoral encontré paz y dirección en momentos difíciles.”
-  </div>
-
-  <div class="testimonio">
-    “La orientación psicológica y espiritual restauró mi esperanza.”
-  </div>
 </section>
 
 <footer>
-  © 2026 Pastor Psicólogo Jair Hernández Rodríguez
+© 2026 Pastor Psicólogo Jair Hernández
 </footer>
+
+<script>
+function activarMusica(){
+var musica = document.getElementById("musicaFondo");
+musica.volume = 0.2;
+musica.play();
+}
+</script>
 
 </body>
 </html>
+
 
 
 
