@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,8 +14,8 @@ body{
 margin:0;
 font-family:Arial;
 background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -21,7 +25,7 @@ text-align:center;
 
 header{
 background:#0d3b66;
-padding:25px 10px;
+padding:25px;
 }
 
 section{
@@ -51,7 +55,7 @@ font-weight:bold;
 .donar{background:#f77f00;}
 
 .qr-donacion{
-width:30%;
+width:28%;
 max-width:110px;
 min-width:80px;
 height:auto;
@@ -83,7 +87,7 @@ font-size:14px;
 </style>
 </head>
 
-<body onclick="activarAudio()">
+<body id="body">
 
 <header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
@@ -92,13 +96,11 @@ font-size:14px;
 
 <section>
 <h2>Acompañamiento Espiritual</h2>
-<p>Orientación basada en principios bíblicos y psicológicos.</p>
 <a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">WhatsApp</a>
 </section>
 
 <section>
 <h2>IA Pastoral</h2>
-<p>Asistente virtual de apoyo emocional.</p>
 <a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">Acceder IA</a>
 </section>
 
@@ -116,26 +118,20 @@ class="qr-donacion">
 
 <button class="music-btn" onclick="toggleMusica()">🎵 Música</button>
 
-<audio id="musicaFondo" loop preload="auto">
-<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
+<audio id="musicaFondo" loop>
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5aef1db8df.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-let audioListo=false;
-
-function activarAudio(){
-if(!audioListo){
 var musica=document.getElementById("musicaFondo");
 musica.volume=0.2;
-musica.play().then(()=>{
-musica.pause();
-audioListo=true;
+
+document.body.addEventListener('click', function iniciar(){
+musica.play();
+document.body.removeEventListener('click', iniciar);
 });
-}
-}
 
 function toggleMusica(){
-var musica=document.getElementById("musicaFondo");
 if(musica.paused){
 musica.play();
 }else{
@@ -146,9 +142,6 @@ musica.pause();
 
 </body>
 </html>
-
-
-
 
 
 
