@@ -76,7 +76,9 @@ z-index:999;
 }
 
 iframe{
-display:none;
+width:0;
+height:0;
+border:0;
 }
 </style>
 </head>
@@ -111,19 +113,20 @@ class="qr-donacion">
 <div id="player"></div>
 
 <script>
-var activo=false;
+var iframe;
 
 function activarMusica(){
-if(!activo){
-document.getElementById("player").innerHTML =
-'<iframe width="0" height="0" src="https://www.youtube.com/embed/7C2z4GqqS5E?autoplay=1&loop=1&playlist=7C2z4GqqS5E"></iframe>';
-activo=true;
+if(!iframe){
+iframe=document.createElement("iframe");
+iframe.src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=0&loop=1&playlist=jfKfPfyJRdk";
+document.getElementById("player").appendChild(iframe);
 }
 }
 </script>
 
 </body>
 </html>
+
 
 
 
