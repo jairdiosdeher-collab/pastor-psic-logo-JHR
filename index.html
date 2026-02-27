@@ -8,89 +8,44 @@
 <style>
 body{
 margin:0;
-font-family:Arial;
-background:#f4f6f9;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f8;
 text-align:center;
 }
 
-/* HERO CON IMAGEN */
-.hero{
-background:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover no-repeat;
-padding:150px 20px;
+header{
+background:#0d3b66;
 color:white;
+padding:40px 20px;
 }
 
-.overlay{
-background:rgba(0,0,0,0.6);
-padding:50px;
-border-radius:10px;
+section{
+padding:40px 20px;
 }
 
 .btn{
 display:inline-block;
 padding:15px 25px;
-background:#25D366;
-color:white;
-text-decoration:none;
+margin:10px;
+font-size:18px;
 border-radius:8px;
-margin-top:15px;
-font-weight:bold;
-}
-
-.btn-donar{
-display:inline-block;
-padding:15px 25px;
-background:#6A1B9A;
-color:white;
 text-decoration:none;
-border-radius:8px;
-margin-top:15px;
-font-weight:bold;
-}
-
-.section{
-padding:60px 20px;
-max-width:900px;
-margin:auto;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-margin-bottom:40px;
-}
-
-.card img{
-width:100%;
-border-radius:12px;
-}
-
-/* BOTÓN IA */
-.chat-button{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#007BFF;
 color:white;
-padding:15px 20px;
-border-radius:50px;
-cursor:pointer;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-z-index:999;
 }
 
-.chat-box{
-display:none;
-position:fixed;
-bottom:80px;
-right:20px;
-width:300px;
-background:white;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.3);
+.whatsapp{background:#25D366;}
+.nequi{background:#6C00FF;}
+.ia{background:#0077b6;}
+.donar{background:#f77f00;}
+
+img{
+max-width:300px;
+margin:20px auto;
+}
+
+footer{
+background:#0d3b66;
+color:white;
 padding:20px;
 }
 </style>
@@ -98,72 +53,75 @@ padding:20px;
 
 <body>
 
-<section class="hero">
-<div class="overlay">
-<h1>Jair Hernández Rodríguez</h1>
-<p>Acompañamiento emocional y espiritual con fundamentos bíblicos y psicológicos</p>
+<header>
+<h1>Pastor Psicólogo Jair Hernández Rodríguez</h1>
+<p>Consejería Pastoral y Orientación Psicológica</p>
+</header>
 
-<a class="btn" href="https://wa.me/573124710702?text=Hola%20Pastor%20Jair,%20necesito%20orientación">
-Solicitar orientación por WhatsApp
-</a>
-</div>
+<section>
+<h2>🙏 Acompañamiento Espiritual y Emocional</h2>
+
+<!-- Imagen Biblia -->
+<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<path d="M21 4H3v16h18V4zm-9 14H5V6h7v12zm2 0V6h5v12h-5z"/>
+</svg>
+
+<p>Recibe orientación basada en principios bíblicos y psicológicos.</p>
 </section>
 
-<section class="section">
+<section>
+<h2>✝️ Consejería Cristiana</h2>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516307365426-bea591f05011">
-<h2>¿Te sientes abrumado?</h2>
-<p>Ansiedad, crisis emocional o falta de dirección espiritual.</p>
-</div>
+<!-- Imagen Cruz -->
+<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6z"/>
+</svg>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<h2>Restauración y esperanza</h2>
-<p>Más de 20 años acompañando procesos espirituales y emocionales.</p>
-</div>
+<p>Apoyo para ansiedad, crisis emocionales y dirección espiritual.</p>
+</section>
 
-<div class="card">
-<h2>Apoya este ministerio</h2>
+<section>
+<h2>🤖 Asistente Virtual Pastoral</h2>
 
-<a class="btn-donar" href="https://wa.me/573124710702?text=Deseo%20realizar%20una%20donación%20por%20Nequi">
+<!-- Imagen Oración -->
+<svg width="200" height="200" viewBox="0 0 24 24" fill="#0d3b66">
+<path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+</svg>
+
+<p>Habla ahora con nuestra IA de orientación emocional y espiritual.</p>
+
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
+Acceder a la IA Pastoral
+</a>
+
+</section>
+
+<section>
+<h2>📲 Contacto WhatsApp</h2>
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
+Escribir por WhatsApp
+</a>
+</section>
+
+<section>
+<h2>💜 Apoya este Ministerio</h2>
+
+<p>Haz tu donación al Nequi:</p>
+<h3>3124710702</h3>
+
+<a class="btn donar" href="https://wa.me/573124710702?text=Hola%20quiero%20hacer%20una%20donación%20al%20ministerio" target="_blank">
 Donar por Nequi
 </a>
 
-<br><br>
-
-<h3>Escanea para donar</h3>
-<img src="qr-nequi.jpg" width="200">
-<p>Nequi: 3124710702</p>
-
-</div>
-
 </section>
 
-<!-- BOTÓN IA -->
-<div class="chat-button" onclick="toggleChat()">
-Asistente IA
-</div>
-
-<div class="chat-box" id="chatBox">
-<h3>IA de Orientación Pastoral</h3>
-<p>Haz clic para iniciar acompañamiento emocional y espiritual.</p>
-
-<a class="btn" target="_blank"
-href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing">
-Iniciar Asistente IA
-</a>
-</div>
-
-<script>
-function toggleChat(){
-var chat = document.getElementById("chatBox");
-chat.style.display = chat.style.display === "block" ? "none" : "block";
-}
-</script>
+<footer>
+<p>© 2026 Pastor Psicólogo Jair Hernández Rodríguez</p>
+</footer>
 
 </body>
 </html>
+
 
 
 
