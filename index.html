@@ -6,59 +6,80 @@
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65');
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
 background-size:cover;
 background-position:center;
-background-attachment:fixed;
+background-repeat:no-repeat;
 color:white;
 text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:100vh;
 }
 
-section{
-padding:20px;
-margin:15px auto;
-background:rgba(0,0,0,0.6);
-border-radius:12px;
+.container{
+background:rgba(0,0,0,0.55);
+padding:25px;
+border-radius:15px;
 width:90%;
-max-width:500px;
+max-width:400px;
+backdrop-filter:blur(6px);
+}
+
+h1{
+margin-bottom:5px;
+}
+
+p{
+margin-top:0;
+opacity:0.9;
 }
 
 .btn{
 display:block;
-margin:12px;
+margin:12px 0;
 padding:14px;
 background:#0d3b66;
 color:white;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#145da0;
+transform:scale(1.02);
 }
 
 footer{
-margin-bottom:40px;
+margin-top:20px;
+font-size:12px;
+opacity:0.7;
 }
+
 </style>
 </head>
 
 <body>
 
-<section>
+<div class="container">
+
 <h1>Pastor Psicólogo Jair Hernández</h1>
 <p>Consejería Pastoral y Orientación Psicológica</p>
-</section>
-
-<section>
-<h2>Acompañamiento Espiritual</h2>
 
 <a class="btn" href="https://wa.me/573124710702" target="_blank">
 WhatsApp
 </a>
 
-<a class="btn" href="https://gemini.google.com/" target="_blank">
+<a class="btn" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
 IA Pastoral
 </a>
 
@@ -66,48 +87,63 @@ IA Pastoral
 Donar por Nequi (3124710702)
 </a>
 
-</section>
-
 <footer>
 © 2026 Pastor Psicólogo Jair Hernández
 </footer>
 
+</div>
+
 <script>
+
+let audioStarted=false;
 let ctx;
-let started=false;
 
-function startWorshipMusic(){
+function startMusic(){
 
-if(started) return;
+if(audioStarted) return;
 
 ctx=new(window.AudioContext||window.webkitAudioContext)();
 
-let gain=ctx.createGain();
-gain.gain.value=0.02;
-gain.connect(ctx.destination);
+let master=ctx.createGain();
+master.gain.value=0.03;
+master.connect(ctx.destination);
 
-function createPad(freq){
+function pad(freq){
 let osc=ctx.createOscillator();
+let gain=ctx.createGain();
+let filter=ctx.createBiquadFilter();
+
 osc.type="sine";
 osc.frequency.value=freq;
-osc.connect(gain);
+
+filter.type="lowpass";
+filter.frequency.value=600;
+
+gain.gain.value=0.4;
+
+osc.connect(filter);
+filter.connect(gain);
+gain.connect(master);
+
 osc.start();
-return osc;
 }
 
-createPad(261.63); // Do
-createPad(329.63); // Mi
-createPad(392.00); // Sol
+pad(261.63);
+pad(329.63);
+pad(392.00);
+pad(523.25);
 
-started=true;
+audioStarted=true;
 }
 
-document.body.addEventListener("click",startWorshipMusic);
-document.body.addEventListener("touchstart",startWorshipMusic);
+document.body.addEventListener("click",startMusic);
+document.body.addEventListener("touchstart",startMusic);
+
 </script>
 
 </body>
 </html>
+
 
 
 
