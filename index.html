@@ -6,12 +6,11 @@
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(rgba(13,27,42,0.85),rgba(13,27,42,0.85)),
-url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65');
+url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1350&q=80');
 background-size:cover;
 background-position:center;
 color:white;
@@ -31,9 +30,6 @@ border-radius:12px;
 width:90%;
 max-width:500px;
 }
-
-h1{font-size:24px;}
-h2{font-size:20px;}
 
 .btn{
 display:block;
@@ -66,15 +62,79 @@ background:#0d3b66;
 padding:10px;
 font-size:14px;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- AUDIO -->
 <audio id="musicaFondo" loop preload="auto">
-<source src="https://cdn.pixabay.com/audio
+<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+<h1>Pastor Psicólogo Jair Hernández</h1>
+<p>Consejería Pastoral y Orientación Psicológica</p>
+</header>
+
+<section>
+<h2>Acompañamiento Espiritual</h2>
+
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
+Hablar por WhatsApp
+</a>
+</section>
+
+<section>
+<h2>IA Pastoral</h2>
+
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
+Acceder Asistente IA
+</a>
+</section>
+
+<section>
+<h2>Donaciones Nequi</h2>
+
+<div class="numero">
+Nequi: 3124710702
+</div>
+
+<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
+Donar
+</a>
+</section>
+
+<section>
+<h2>Ambiente de Oración</h2>
+
+<button id="btnMusica" class="btn musica" onclick="toggleMusica()">
+🎧 Escuchar Música
+</button>
+</section>
+
+<footer>
+© 2026 Pastor Psicólogo Jair Hernández
+</footer>
+
+<script>
+var musica = document.getElementById("musicaFondo");
+var btn = document.getElementById("btnMusica");
+musica.volume = 0.2;
+
+function toggleMusica(){
+if(musica.paused){
+musica.play();
+btn.innerHTML="⏸️ Pausar Música";
+}else{
+musica.pause();
+btn.innerHTML="🎧 Escuchar Música";
+}
+}
+</script>
+
+</body>
+</html>
+
 
 
 
