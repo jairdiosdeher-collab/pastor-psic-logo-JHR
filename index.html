@@ -6,11 +6,12 @@
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
+
 body{
 margin:0;
-font-family: 'Segoe UI', Arial, sans-serif;
-background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(rgba(13,27,42,0.85),rgba(13,27,42,0.85)),
+url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1350&q=80');
 background-size:cover;
 background-position:center;
 color:white;
@@ -18,55 +19,62 @@ text-align:center;
 }
 
 header{
-padding:40px 20px;
-background:rgba(13,59,102,0.85);
+background:#0d3b66;
+padding:30px 10px;
 }
 
 section{
-padding:25px;
-margin:20px auto;
-background:rgba(0,0,0,0.6);
-border-radius:15px;
+padding:20px;
+margin:15px auto;
+background:rgba(0,0,0,0.5);
+border-radius:12px;
 width:90%;
-max-width:600px;
+max-width:500px;
 }
 
-h1{font-size:26px;}
+h1{font-size:24px;}
 h2{font-size:20px;}
+p{font-size:16px;}
 
 .btn{
 display:block;
 width:85%;
-max-width:320px;
-padding:14px;
+max-width:280px;
+padding:12px;
 margin:12px auto;
 font-size:16px;
-border-radius:30px;
+border-radius:8px;
 text-decoration:none;
 color:white;
 font-weight:bold;
-transition:0.3s;
 }
-
-.btn:hover{transform:scale(1.05);}
 
 .whatsapp{background:#25D366;}
-.ia{background:#1d3557;}
-.donar{background:#f4a261;}
+.ia{background:#0077b6;}
+.donar{background:#f77f00;}
+.musica{background:#6a4c93;}
+
+.versiculo{
+font-style:italic;
+font-size:15px;
+margin:10px;
+opacity:0.9;
+}
 
 footer{
-margin-top:20px;
-padding:15px;
-background:rgba(13,59,102,0.85);
+background:#0d3b66;
+padding:10px;
 font-size:14px;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- MUSICA OPCIONAL -->
 <audio id="musicaFondo" loop>
-<source src="https://cdn.pixabay.com/download/audio/2023/03/27/audio_5f9b9fbb21.mp3?filename=soft-piano-ambient-144998.mp3" type="audio/mpeg">
+<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
 </audio>
 
 <header>
@@ -78,23 +86,40 @@ font-size:14px;
 <h2>Acompañamiento Espiritual</h2>
 <p>Orientación basada en principios bíblicos y psicológicos.</p>
 
+<div class="versiculo">
+“El Señor está cerca de los quebrantados de corazón” – Salmo 34:18
+</div>
+
 <a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
-WhatsApp
+Hablar por WhatsApp
 </a>
 </section>
 
 <section>
 <h2>IA Pastoral</h2>
+<p>Recibe orientación emocional y espiritual inmediata.</p>
+
 <a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
-Acceder IA
+Acceder Asistente IA
 </a>
 </section>
 
 <section>
-<h2>Donar por Nequi</h2>
+<h2>Apoya este Ministerio</h2>
+<p>Donaciones vía Nequi</p>
+
 <a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
-Donar al 3124710702
+Donar por Nequi
 </a>
+</section>
+
+<section>
+<h2>Ambiente de Oración</h2>
+<p>Escuchar música de adoración suave mientras navegas</p>
+
+<button class="btn musica" onclick="toggleMusica()">
+🎧 Escuchar Música de Oración
+</button>
 </section>
 
 <footer>
@@ -102,23 +127,21 @@ Donar al 3124710702
 </footer>
 
 <script>
-let musicaIniciada = false;
+var musica = document.getElementById("musicaFondo");
+musica.volume = 0.2;
 
-function iniciarMusica() {
-if(!musicaIniciada){
-let audio = document.getElementById("musicaFondo");
-audio.volume = 0.25;
-audio.play();
-musicaIniciada = true;
+function toggleMusica(){
+if(musica.paused){
+musica.play();
+}else{
+musica.pause();
 }
 }
-
-document.addEventListener("click", iniciarMusica);
-document.addEventListener("touchstart", iniciarMusica);
 </script>
 
 </body>
 </html>
+
 
 
 
