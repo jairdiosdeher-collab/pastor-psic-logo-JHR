@@ -6,143 +6,120 @@
 <title>Pastor Psicólogo Jair Hernández</title>
 
 <style>
-
 body{
 margin:0;
-font-family:'Segoe UI',sans-serif;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+font-family: 'Segoe UI', Arial, sans-serif;
+background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1507692049790-de58290a4334');
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 color:white;
 text-align:center;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-min-height:100vh;
 }
 
-.container{
-background:rgba(0,0,0,0.55);
+header{
+padding:40px 20px;
+background:rgba(13,59,102,0.85);
+}
+
+section{
 padding:25px;
+margin:20px auto;
+background:rgba(0,0,0,0.6);
 border-radius:15px;
 width:90%;
-max-width:400px;
-backdrop-filter:blur(6px);
+max-width:600px;
 }
 
-h1{
-margin-bottom:5px;
-}
-
-p{
-margin-top:0;
-opacity:0.9;
-}
+h1{font-size:26px;}
+h2{font-size:20px;}
 
 .btn{
 display:block;
-margin:12px 0;
+width:85%;
+max-width:320px;
 padding:14px;
-background:#0d3b66;
-color:white;
+margin:12px auto;
+font-size:16px;
+border-radius:30px;
 text-decoration:none;
-border-radius:8px;
+color:white;
 font-weight:bold;
 transition:0.3s;
 }
 
-.btn:hover{
-background:#145da0;
-transform:scale(1.02);
-}
+.btn:hover{transform:scale(1.05);}
+
+.whatsapp{background:#25D366;}
+.ia{background:#1d3557;}
+.donar{background:#f4a261;}
 
 footer{
 margin-top:20px;
-font-size:12px;
-opacity:0.7;
+padding:15px;
+background:rgba(13,59,102,0.85);
+font-size:14px;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<audio id="musicaFondo" loop>
+<source src="https://cdn.pixabay.com/download/audio/2023/03/27/audio_5f9b9fbb21.mp3?filename=soft-piano-ambient-144998.mp3" type="audio/mpeg">
+</audio>
 
+<header>
 <h1>Pastor Psicólogo Jair Hernández</h1>
 <p>Consejería Pastoral y Orientación Psicológica</p>
+</header>
 
-<a class="btn" href="https://wa.me/573124710702" target="_blank">
+<section>
+<h2>Acompañamiento Espiritual</h2>
+<p>Orientación basada en principios bíblicos y psicológicos.</p>
+
+<a class="btn whatsapp" href="https://wa.me/573124710702" target="_blank">
 WhatsApp
 </a>
+</section>
 
-<a class="btn" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
-IA Pastoral
+<section>
+<h2>IA Pastoral</h2>
+<a class="btn ia" href="https://gemini.google.com/gem/14hgj7zZkYy35mAn75_n6FvAB0eg1lbST?usp=sharing" target="_blank">
+Acceder IA
 </a>
+</section>
 
-<a class="btn" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi%203124710702" target="_blank">
-Donar por Nequi (3124710702)
+<section>
+<h2>Donar por Nequi</h2>
+<a class="btn donar" href="https://wa.me/573124710702?text=Quiero%20realizar%20una%20donación%20por%20Nequi" target="_blank">
+Donar al 3124710702
 </a>
+</section>
 
 <footer>
 © 2026 Pastor Psicólogo Jair Hernández
 </footer>
 
-</div>
-
 <script>
+let musicaIniciada = false;
 
-let audioStarted=false;
-let ctx;
-
-function startMusic(){
-
-if(audioStarted) return;
-
-ctx=new(window.AudioContext||window.webkitAudioContext)();
-
-let master=ctx.createGain();
-master.gain.value=0.03;
-master.connect(ctx.destination);
-
-function pad(freq){
-let osc=ctx.createOscillator();
-let gain=ctx.createGain();
-let filter=ctx.createBiquadFilter();
-
-osc.type="sine";
-osc.frequency.value=freq;
-
-filter.type="lowpass";
-filter.frequency.value=600;
-
-gain.gain.value=0.4;
-
-osc.connect(filter);
-filter.connect(gain);
-gain.connect(master);
-
-osc.start();
+function iniciarMusica() {
+if(!musicaIniciada){
+let audio = document.getElementById("musicaFondo");
+audio.volume = 0.25;
+audio.play();
+musicaIniciada = true;
+}
 }
 
-pad(261.63);
-pad(329.63);
-pad(392.00);
-pad(523.25);
-
-audioStarted=true;
-}
-
-document.body.addEventListener("click",startMusic);
-document.body.addEventListener("touchstart",startMusic);
-
+document.addEventListener("click", iniciarMusica);
+document.addEventListener("touchstart", iniciarMusica);
 </script>
 
 </body>
 </html>
+
 
 
 
