@@ -108,32 +108,45 @@ Donar
 <h2>Ambiente de Oración</h2>
 
 <button id="btnMusica" class="btn musica" onclick="toggleMusica()">
+🎧 Activar Música de Oración
+</button>
+
+<a class="btn ia" href="https://acordes.lacuerda.net/himnos_de_gloria_y_triunfo/" target="_blank">
+📖 Ver Himnos de Gloria y Triunfo
+</a>
+
+</section>
+
+<button id="btnMusica" class="btn musica" onclick="toggleMusica()">
 🎧 Música de Oración / Himnos
 </button>
 </section>
 
 <footer>
 © 2026 Pastor Psicólogo Jair Hernández
-</footer>
-
-<script>
+</foote>
+  <script>
 var musica = document.getElementById("musicaFondo");
 var btn = document.getElementById("btnMusica");
 musica.volume = 0.2;
 
 function toggleMusica(){
 if(musica.paused){
-musica.play();
+musica.play().then(()=>{
 btn.innerHTML="⏸️ Pausar Música";
+}).catch(()=>{
+alert("Toca nuevamente el botón para activar el sonido");
+});
 }else{
 musica.pause();
-btn.innerHTML="🎧 Escuchar Música";
+btn.innerHTML="🎧 Activar Música de Oración";
 }
 }
 </script>
 
 </body>
 </html>
+
 
 
 
