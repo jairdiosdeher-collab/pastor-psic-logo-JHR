@@ -68,7 +68,7 @@ font-size:14px;
 <body>
 
 <audio id="musicaFondo" loop preload="auto">
-<source src="https://cdn.pixabay.com/audio/2023/03/27/audio_5f9b9fbb21.mp3" type="audio/mpeg">
+<source src="musica.aac" type="audio/aac">
 </audio>
 
 <header>
@@ -126,26 +126,38 @@ Donar
 © 2026 Pastor Psicólogo Jair Hernández
 </foote>
   <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
 var musica = document.getElementById("musicaFondo");
 var btn = document.getElementById("btnMusica");
-musica.volume = 0.2;
 
-function toggleMusica(){
+btn.addEventListener("click", function(){
+
 if(musica.paused){
-musica.play().then(()=>{
+
+musica.play().then(function(){
 btn.innerHTML="⏸️ Pausar Música";
-}).catch(()=>{
-alert("Toca nuevamente el botón para activar el sonido");
+}).catch(function(){
+alert("Si no suena, quita el modo silencio del celular.");
 });
+
 }else{
+
 musica.pause();
 btn.innerHTML="🎧 Activar Música de Oración";
+
 }
-}
+
+});
+
+});
+
 </script>
 
 </body>
 </html>
+
 
 
 
